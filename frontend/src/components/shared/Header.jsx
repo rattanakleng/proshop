@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
+import { LinkContainer } from 'react-router-bootstrap';
 
 const header = () => {
    return (
@@ -14,9 +15,11 @@ const header = () => {
          >
             <Container>
                <div>
-                  <Navbar.Brand href='/home' className='text-light'>
+               <LinkContainer to='/'>               
+                  <Navbar.Brand className='text-light'>
                      ProShop
                   </Navbar.Brand>
+               </LinkContainer>
                </div>
 
                <div>
@@ -31,12 +34,17 @@ const header = () => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                      >
-                        <Nav.Link href='/cart' className='text-light mr-3'>
-                           <FontAwesomeIcon icon={faShoppingCart} /> Cart
-                        </Nav.Link>
-                        <Nav.Link href='/signin' className='text-light'>
-                           <FontAwesomeIcon icon={faUser} /> Signin
-                        </Nav.Link>
+                        <LinkContainer to='/cart'>
+                           <Nav.Link className='text-light mr-5'>
+                              <FontAwesomeIcon icon={faShoppingCart} /> Cart
+                           </Nav.Link>
+                        </LinkContainer>
+                        
+                        <LinkContainer to='signin'>
+                           <Nav.Link href='/signin' className='text-light'>
+                              <FontAwesomeIcon icon={faUser} /> Sign in
+                           </Nav.Link>
+                        </LinkContainer>                        
                      </Nav>
                   </Navbar.Collapse>
                </div>
