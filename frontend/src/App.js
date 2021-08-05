@@ -4,13 +4,15 @@ import './bootstrap.min.css';
 import './App.css';
 import Header from '../src/components/shared/Header';
 import Footer from '../src/components/shared/Footer';
+import HomePage from './components/pages/HomePage';
 
 const App = () => {
    return (
       <Fragment>
          <Header />
+         
          <Container>
-            <h1> Welcome </h1>
+            <HomePage />
          </Container>
 
          <Footer />
