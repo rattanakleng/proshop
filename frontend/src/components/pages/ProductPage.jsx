@@ -1,10 +1,14 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const ProductPage = () => {
     return (
-        <div>
-            Product Page            
-        </div>
+        <Container>
+            <Link to='/'>
+                <p>GO BACK</p>
+            </Link>          
+        </Container>
     )
 };
 

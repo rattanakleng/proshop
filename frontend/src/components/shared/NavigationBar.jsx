@@ -4,22 +4,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
 import { LinkContainer } from 'react-router-bootstrap';
 
-const header = () => {
+const NavigationBar = () => {
    return (
       <header>
          <Navbar
-            bg='info'
-            className='container-fluid'
+            bg='black'
+            className='container-fluid fixed-top'
             expand='lg'
-            collapseOnSelect
-         >
+            collapseOnSelect>
             <Container>
                <div>
-               <LinkContainer to='/'>               
-                  <Navbar.Brand className='text-light'>
-                     ProShop
-                  </Navbar.Brand>
-               </LinkContainer>
+                  <LinkContainer to='/'>
+                     <Navbar.Brand className='text-light'>ProShop</Navbar.Brand>
+                  </LinkContainer>
                </div>
 
                <div>
@@ -32,19 +29,18 @@ const header = () => {
                      <Nav
                         className='ml-auto text-light'
                         style={{ maxHeight: '100px' }}
-                        navbarScroll
-                     >
+                        navbarScroll>
                         <LinkContainer to='/cart'>
                            <Nav.Link className='text-light mr-5'>
                               <FontAwesomeIcon icon={faShoppingCart} /> Cart
                            </Nav.Link>
                         </LinkContainer>
-                        
+
                         <LinkContainer to='signin'>
                            <Nav.Link href='/signin' className='text-light'>
                               <FontAwesomeIcon icon={faUser} /> Sign in
                            </Nav.Link>
-                        </LinkContainer>                        
+                        </LinkContainer>
                      </Nav>
                   </Navbar.Collapse>
                </div>
@@ -54,4 +50,4 @@ const header = () => {
    );
 };
 
-export default header;
+export default NavigationBar;

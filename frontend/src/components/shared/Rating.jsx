@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons'
+import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons';
 
 const Rating = ({ value, text }) => {
     return (
-        <div>
+        <div className='text-secondary'>
             <span>
                 { value >= 1 ? <FontAwesomeIcon icon={faStar} /> : value >= 0.5 ? <FontAwesomeIcon icon={faStarHalf} /> : '' }
             </span>
