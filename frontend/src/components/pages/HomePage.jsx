@@ -64,6 +64,9 @@ const HomePage = () => {
                ))}
             </Row>
          </Container>
+
+         <h1 className='text-center mt-5'>Why do you have to buy camera from us?</h1>
+
       </Container>
    );
 };

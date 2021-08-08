@@ -6,7 +6,7 @@ import './App.css';
 import NavigationBar from '../src/components/shared/NavigationBar';
 import Footer from '../src/components/shared/Footer';
 import HomePage from './components/pages/HomePage';
-import ProductPage from './components/pages/ProductPage';
+import ProductDetailPage from './components/pages/ProductDetailPage';
 
 const App = () => {
    return (
@@ -15,7 +15,7 @@ const App = () => {
          <Container fluid className='px-0'>
             <Route exact path='/' component={HomePage} />
             {/*:id is a params/place holder for what ever pass in */}
-            <Route path='/product/:id' component={ProductPage} />
+            <Route path='/product/:id' component={ProductDetailPage} />
          </Container>
          <Footer />
       </Router>
